@@ -1,9 +1,9 @@
-
+import {Header} from "./components/Header"
 
 const App = () => {
     return (
         <div>
-            <h1>hello</h1>
+            <Header leftSlider="---" text="MainPage" rightProfile="O"/>
         </div>
     )
 }
