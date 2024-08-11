@@ -10,10 +10,10 @@ export function Header ({
     rightProfile,
 }: HeaderProps) {
     return (
-        <div className="text-blue-500">
+        <div className="flex flex-wrap justify-between items-center mx-auto bg-black text-white font-medium">
             <div className="">{leftSlider}</div>
             <div>{text}</div>
-            <div>{rightProfile}</div>
+            <div><a href="../pages/UserProfile">{rightProfile}</a></div>
         </div>
     )
 }
