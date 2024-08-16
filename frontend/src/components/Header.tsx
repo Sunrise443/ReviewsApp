@@ -1,20 +1,19 @@
-import React from "react"
 import { NavLink } from "react-router-dom"
 
 interface HeaderProps {
     text?: string
-    rightProfile: string
+    rightProfile?: string
   }
 
 export function Header ({
     text,
-    rightProfile,
+    rightProfile = "/userbutton.png",
 }: HeaderProps) {
     return (
-        <div className="flex flex-wrap justify-between items-center mx-auto bg-black text-white font-medium">
-            <div className="">---</div>
+        <div className="flex h-12 justify-between items-center mx-auto bg-dark font-medium">
+            <button className="ml-3"><img src="/menu.png" alt="Menu Button" /></button>
             <div>{text}</div>
-            <div><NavLink to="/user">{rightProfile}</NavLink></div>
+            <NavLink to="/user" className="mr-2"><img src={rightProfile} alt="User Button" /></NavLink>
         </div>
     )
 }
