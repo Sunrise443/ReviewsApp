@@ -1,17 +1,16 @@
-import {Header} from "./components/Header"
-import { LeftSlider } from "./components/LeftSLider"
-import { Post } from "./components/Post"
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-const App = () => {
-    return (
-        <div>
-            <Header leftSlider="---" text="MainPage" rightProfile="O"/>
-            <div className="flex">
-                <LeftSlider/>
-                <Post/>
-            </div>
-        </div>
-    )
-}
+import { Home } from './pages/Home';
+import { UserProfile } from './pages/UserProfile'
 
-export default App
+const App: React.FC = () => (
+    <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='users/:id' element={<UserProfile />} />
+        </Routes>
+    </BrowserRouter>
+);
+
+export default App;
