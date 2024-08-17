@@ -8,6 +8,9 @@ export default {
       dark: '#b6cdbd',
       darker: '#5c715e',
     },
+    fontFamily: {
+      'code': ['Consolas','Monaco','Lucida Console','Liberation Mono','DejaVu Sans Mono','Bitstream Vera Sans Mono','Courier New']
+    },
     extend: {},
   },
   plugins: [],
