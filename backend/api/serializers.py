@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from .models import FriendPost
+from .models import Post
 
 class UserSerealizer(serializers.ModelSerializer):
     class Meta:
@@ -13,8 +13,8 @@ class UserSerealizer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user
     
-class FriendPostSerealizer(serializers.ModelSerializer):
+class PostSerealizer(serializers.ModelSerializer):
     class Meta:
-        model = FriendPost
+        model = Post
         fields = ["id", "title", "created_at", "content", "author"]
         extra_kwargs = {"author": {"read_only": True}}
