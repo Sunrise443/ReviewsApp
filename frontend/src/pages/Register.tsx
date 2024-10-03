@@ -1,5 +1,8 @@
+
+import { UserForm } from "../components/UserForm"
+
 export function Register () {
     return(
-        <div>Register</div>
+        <UserForm route="/api/user/register/" method="register"/>
     )
 }
