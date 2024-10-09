@@ -8,6 +8,7 @@ export function ForFriends() {
             <div>
                 <Post/>
                 <Post/>
+                <Post/>
             </div>
         </div>
     )
