@@ -14,14 +14,16 @@ export function Header ({
     rightProfile = "/userbutton.png"
 }: HeaderProps) {
 
-    const [isOpened, setIsOpened] = useState<boolean>(false)
+    const [isOpened, setIsOpened] = useState(false)
+
+    const toggleSlider = () => setIsOpened(prev => !prev)
 
     return (
         <div>
             <div className="flex h-12 justify-between items-center mx-auto bg-dark font-semibold">
-                <button className="p-1 ml-3" onClick={() => setIsOpened(!isOpened)}><img src="/menu.png" alt="Menu Button" /></button>
-                <div>{text}</div>
-                <NavLink to="/user" className="mr-2"><img src={rightProfile} alt="User Button" /></NavLink>
+                <button className="p-1 ml-3" onClick={toggleSlider}><img src="/menu.png" alt="Menu" /></button>
+                <h1>{text}</h1>
+                <NavLink to="/user" className="mr-2"><img src={rightProfile} alt="User" /></NavLink>
             </div>
             <div className="absolute">
             </div>
